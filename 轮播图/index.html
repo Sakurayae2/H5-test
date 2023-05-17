@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div class="container">
+    <div class="slide fade">
+      <img src="../imgs/d1.jpg">
+    </div>
+    <div class="slide fade">
+      <img src="../imgs/d2.jpg">
+    </div>
+    <div class="slide fade">
+      <img src="../imgs/n.png">
+    </div>
+    <div class="slide fade">
+      <img src="../imgs/t1.png">
+    </div>
+    <div class="slide fade">
+      <img src="../imgs/t2.png">
+    </div>
+    <a class="prev" onclick="change(-1)">&#10094;</a>
+    <a class="next" onclick="change(1)">&#10095;</a>
+  </div>
+  <div class="dotsList">
+    <span class="dot" onclick="current(1)"></span>
+    <span class="dot" onclick="current(2)"></span>
+    <span class="dot" onclick="current(3)"></span>
+    <span class="dot" onclick="current(4)"></span>
+    <span class="dot" onclick="current(5)"></span>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body,
+    html {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .btn {
+      width: 300px;
+      border: 0px;
+      background-color: #eee;
+      margin-top: 10px;
+      padding: 18px;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .btn:hover {
+      background-color: #444;
+    }
+
+    .item {
+      padding: 18px;
+      overflow: hidden;
+      display: none;
+      transition: all 1s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <button class="btn">selection1</button>
+    <div class="item">
+      <p>
+        111
+      </p>
+    </div>
+    <button class="btn">selection2</button>
+    <div class="item">
+      <p>
+        222
+      </p>
+    </div>
+    <button class="btn">selection3</button>
+    <div class="item">
+      <p>
+        333
+      </p>
+    </div>
+  </div>
+  <script>
+    var btn = document.querySelectorAll('.btn')
+    for (let i = 0; i < btn.length; i++) {
+      btn[i].addEventListener('click', function () {
+        this.classList.toggle('active')
+        var item = this.nextElementSibling // 返回当前元素在其父元素的子元素节点中的后一个元素节点，如果该元素已经是最后一个元素节点，则返回 null
+        item.style.display == 'block' ? item.style.display = 'none' : item.style.display = 'block'
+      })
+    }
+  </script>
+</body>
+
+</html>

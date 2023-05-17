@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .bgimg {
+      background-image: url("../imgs/d2.jpg");
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      color: white;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 25px;
+    }
+
+    .topleft {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+    }
+
+    .bottomleft {
+      position: absolute;
+      bottom: 0;
+      left: 16px;
+    }
+
+    .middle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    hr {
+      margin: auto;
+      width: 40%;
+    }
+    .logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  </style>
+  <body>
+    <div class="bgimg">
+      <div class="topleft">
+        <img src="../imgs//d3.jpg" class="logo" />
+      </div>
+      <div class="middle">
+        <h1>COMING SOON</h1>
+        <hr />
+        <p id="demo" style="font-size: 30px"></p>
+      </div>
+      <div class="bottomleft">
+        <p>Read Dead</p>
+      </div>
+    </div>
+
+    <script>
+      // 初始化一个倒计时日期
+      var countDownDate = new Date("Jan 5, 2024 12:34:56").getTime();
+
+      // 每秒更新
+      var countDown = setInterval(function () {
+        // 获取当前日期时间
+        var now = new Date().getTime();
+
+        // 当前日期和目标日期差
+        var distance = countDownDate - now;
+
+        // 计算日时分秒
+        var days =
+          Math.floor(distance / (1000 * 60 * 60 * 24)) < 10
+            ? "0" + Math.floor(distance / (1000 * 60 * 60 * 24))
+            : Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours =
+          Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) < 10
+            ? "0" +
+              Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+            : Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes =
+          Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) < 10
+            ? "0" + Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+            : Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds =
+          Math.floor((distance % (1000 * 60)) / 1000) < 10
+            ? "0" + Math.floor((distance % (1000 * 60)) / 1000)
+            : Math.floor((distance % (1000 * 60)) / 1000);
+        // 输出至demo
+        document.getElementById("demo").innerHTML =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        // 计时结束操作
+        if (distance < 0) {
+          clearInterval(countDown);
+          document.getElementById("demo").innerHTML = "计时结束";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

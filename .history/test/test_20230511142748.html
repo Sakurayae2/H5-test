@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background: url(images/1.jpg) no-repeat center center;
+    }
+
+    .nav {
+      width: 647px;
+      height: 100px;
+      margin: 100px auto;
+      border: 1px solid #ccc;
+    }
+
+    img {
+      width: 158px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <img src="../blog/imgs/d1.jpg" alt="">
+    <img src="../blog/imgs/d2.jpg" alt="">
+    <img src="../blog/imgs/d3.jpg" alt="">
+    <img src="../blog/imgs/d4.jpg" alt="">
+  </div>
+  <script>
+    var images = document.querySelector('.nav').querySelectorAll('img'); //获取nav下面的 所有img
+    for (var i = 0; i < images.length; i++) { //循环
+      images[i].onclick = function () { //images里面的第 i 个 点击事件
+        console.log(this.src);
+        document.body.style.backgroundImage = 'url(' + this.src + ')';
+        // this.src 就是我们点击图片的路径   images/2.jpg
+        // 把这个路径 this.src 给body 就可以了
+        //body的背景图片 url(images/1.jpg) 更换为 '+this.src+';
+      }
+    }
+  </script>
+</body>
+
+</html>

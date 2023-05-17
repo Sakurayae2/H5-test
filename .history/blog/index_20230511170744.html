@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CGin's blog</title>
+  <link rel="stylesheet" href="./index.css" />
+  <import src="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap"></import>
+</head>
+
+<body>
+  <!-- 顶部区域-->
+  <div class="topContainer">
+    <div class="top" id="top">
+      <!-- logo/标题 -->
+      <div class="title">
+        <img src="./imgs/10.jpg" alt="title" class="logo" />
+        <div class="text">CGin's blog</div>
+      </div>
+      <!-- 导航栏 -->
+      <div class="nav">
+        <ul>
+          <li><span>首页</span></li>
+          <li class="hov">
+            <span>分类</span>
+            <div class="items">
+              <a href="#">音乐</a>
+              <a href="#">游戏</a>
+              <a href="#">番剧</a>
+            </div>
+          </li>
+          <li><span>文章</span></li>
+          <li><span>转载</span></li>
+          <li><span>关于</span></li>
+        </ul>
+      </div>
+      <!-- 搜索 -->
+      <div class="search">
+        <input type="search" />
+      </div>
+    </div>
+    <!-- 个人信息展示区域 -->
+    <div class="uesrInfo">
+      <!-- 头像 -->
+      <div class="avatar">
+        <img src="./imgs/1.webp" alt="avatar" class="avatarImg" />
+      </div>
+      <div class="bor">
+        <!-- 签名 -->
+        <div class="signature">
+          <span>种下一棵树的最佳时机是十年前，其次是现在</span>
+        </div>
+        <!-- 链接 -->
+        <div class="links">
+          <div class="link">
+            <div class="con">
+              <div class="changeIcon" onclick="changeBg(-1)">&lt;</div>
+              <div style="margin-top: 20px">
+                <a href="#">
+                  <img src="./imgs//GitHub.png" class="linkImg">
+                </a>
+                <a href="#">
+                  <img src="./imgs/bilibili.png" class="linkImg" style="transform:scale(1.5);">
+                </a>
+              </div>
+              <div class="changeIcon" onclick="changeBg(1)">&gt;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="line">
+    <span>|&nbsp;通知</span>
+  </div>
+  <!-- 通知 -->
+  <div class="notice">
+    <p>
+      哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+    </p>
+  </div>
+  <div class="line2">
+    <span>|&nbsp;分类</span>
+  </div>
+  <!-- 分类 -->
+  <div class="sort">
+    <div class="sorts">
+      <div class="sortContainer">
+        <img src="./imgs/t1.png" class="sortImg" />
+      </div>
+      <div class="sortContainer">
+        <img src="./imgs/bg.png" class="sortImg" />
+      </div>
+      <div class="sortContainer">
+        <img src="./imgs/n.png" class="sortImg" />
+      </div>
+    </div>
+  </div>
+  <div class="line3">
+    <span>|&nbsp;文章</span>
+  </div>
+  <!-- 文章 -->
+  <div class="main">
+    <div class="card">
+      <div class="l">
+        <img src="./imgs/d1.jpg" class="cardImg">
+      </div>
+      <div class="r">
+        <p>2023-5-12 12:34</p>
+        <p>呵呵呵呵嘿嘿</span>
+        <p>了了了了了了溜了溜了...</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="r2">
+        <p>2023-5-9 21:04</p>
+        <p>啦啦啦啦啦</span>
+        <p>哈哈哈哈哈嘿嘿嘿...</span>
+      </div>
+      <div class="l2">
+        <img src="./imgs/d2.jpg" class="cardImg2">
+      </div>
+    </div>
+    <div class="card">
+      <div class="l">
+        <img src="./imgs/d3.jpg" class="cardImg">
+      </div>
+      <div class="r">
+        <p>2023-5-10 12:34</p>
+        <p>title</span>
+        <p>js...</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="r2">
+        <p>2023-5-9 21:04</p>
+        <p>啦啦啦啦啦</span>
+        <p>哈哈哈哈哈嘿嘿嘿...</span>
+      </div>
+      <div class="l2">
+        <img src="./imgs/d4.jpg" class="cardImg2">
+      </div>
+    </div>
+  </div>
+  <!-- 更多按钮 -->
+  <div class="more">
+    <button class="moreBtn" onclick="goTo()">了解更多</button>
+  </div>
+
+  <button onclick="stopp()" class="stop">stop</button>
+  <buttion class="goTop" id="goTop">回到顶部</buttion>
+  <!-- 底部 -->
+  <div class="footer">
+    <p>&copy; CGin</p>
+    <p>Tel:12345678902</p>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>

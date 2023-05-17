@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        overflow: hidden;
+      }
+      .center,
+      .left,
+      .right {
+        float: left;
+        height: 100px;
+      }
+      .center {
+        width: 100%;
+        background-color: pink;
+      }
+      .inner {
+        margin: 0 100px;
+        background-color: brown;
+      }
+      .left {
+        width: 100px;
+        background-color: aqua;
+        margin-left: -100%;
+      }
+      .right {
+        width: 100px;
+        background-color: blue;
+        margin-left: -100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        三栏均设置向左浮动，中间栏设置 width: 100%;，将左右两栏挤到下面，同圣杯布局。
+        设置 margin 属性为负值将左右两栏移到上面，同圣杯布局，此时左右两栏各在最左边和最右边。
+        设置 inner 盒子的 margin 属性将两侧空开。
+     -->
+    <div class="container">
+      <div class="center">
+        <div class="inner">center</div>
+      </div>
+      <div class="left">left</div>
+      <div class="right">right</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+      }
+      .tracking-in-expand {
+        animation: tracking-in-expand 1.5s infinite
+          cubic-bezier(0.215, 0.61, 0.355, 1) both;
+      }
+      .box {
+        width: 50px;
+        height: 50px;
+        background-color: pink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation-name: scale;
+        /* 用于定义动画持续时间，默认0s */
+        animation-duration: 1.5s;
+        /* 用于定义动画迭代次数，也就是执行次数，默认为1 */
+        animation-iteration-count: infinite;
+        /* 用于定义时间函数，通过这个选项，可配置动画随时间的运动速率和轨迹 */
+        animation-timing-function: ease;
+      }
+      .love {
+        animation: boom 0.5s infinite;
+        animation-direction: alternate;
+      }
+      .change {
+        width: 50px;
+        height: 50px;
+        background-color: pink;
+        transition-property: all;
+        transition-duration: 0.8s;
+      }
+      .change::after {
+        content: "⭐";
+        color: rgba(255, 255, 255, 0.8);
+        width: inherit;
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition-duration: 0.8s;
+      }
+      .change:hover {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: aquamarine;
+      }
+      .change:hover::after {
+        content: "❤";
+        font-size: 100px;
+      }
+      main {
+        width: 300px;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: perspective(500px) rotateY(50deg);
+        transform-style: preserve-3d;
+        background-color: #ddd;
+        font-size: 24px;
+      }
+
+      .rotate {
+        width: 50px;
+        height: 50px;
+        background-color: pink;
+        transition-property: all;
+        transition-duration: 0.8s;
+        transition-delay: 0.2s;
+        transform-origin: center;
+      }
+      main:hover .rotate {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: skyblue;
+        transform: rotateY(90deg) translateZ(180px);
+      }
+      .loader {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid pink;
+        animation: spin 2s linear infinite;
+      }
+      #myBar {
+        width: 10%;
+        height: 30px;
+        background-color: #04aa6d;
+        text-align: center; /* To center it horizontally (if you want) */
+        line-height: 30px; /* To center it vertically */
+        color: white;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes scale {
+        50% {
+          width: 100px;
+          height: 100px;
+          background-color: skyblue;
+          border-radius: 50%;
+        }
+      }
+      @keyframes tracking-in-expand {
+        0% {
+          letter-spacing: -0.5em;
+          opacity: 0;
+        }
+        40% {
+          opacity: 0.6;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes boom {
+        100% {
+          transform: scale(1.7);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="tracking-in-expand">LOVE</h1>
+    <div class="love">❤</div>
+    <div class="box"></div>
+    <div class="change"></div>
+    <div class="loader"></div>
+    <main>
+      <p>123</p>
+      <div class="rotate"></div>
+    </main>
+    <div id="myProgress" onclick="move()">
+      <div id="myBar">10%</div>
+    </div>
+    <script>
+      var i = 0;
+      function move() {
+        if (i == 0) {
+          i = 1;
+          var elem = document.getElementById("myBar");
+          var width = 10;
+          var id = setInterval(frame, 10);
+          function frame() {
+            if (width >= 100) {
+              clearInterval(id);
+              i = 0;
+            } else {
+              width++;
+              elem.style.width = width + "%";
+              elem.innerHTML = width + "%";
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

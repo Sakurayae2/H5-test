@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        padding: 0px 100px;
+        min-width: 300px;
+        overflow: hidden;
+      }
+      .left,
+      .center,
+      .right {
+        float: left;
+        height: 100px;
+      }
+      .left {
+        position: relative;
+        left: -100px;
+        margin-left: -100%;
+        width: 100px;
+        background-color: red;
+      }
+      .center {
+        width: 100%;
+        background-color: green;
+      }
+      .right {
+        position: relative;
+        left: 100px;
+        margin-left: -100px;
+        width: 100px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="center">center</div>
+      <div class="left">left</div>
+      <div class="right">right</div>
+    </div>
+  </body>
+</html>

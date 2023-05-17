@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .nav {
+        width: 960px;
+        height: 50px;
+        border: 1px solid palegoldenrod;
+        margin: 100px auto;
+        background-color: pink;
+      }
+      ul {
+        list-style: none;
+      }
+      li {
+        float: left;
+        width: 120px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+      }
+      span {
+        display: block;
+        width: 120px;
+        height: 50px;
+      }
+      span:hover {
+        background-color: aqua;
+      }
+      .items {
+        width: 120px;
+        height: 120px;
+        border: 1px solid greenyellow;
+        display: none;
+      }
+      .items a {
+        font: none;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        display: block;
+        margin-top: -10px;
+      }
+      .items a:link,
+      .items a:visited {
+        color: aquamarine;
+      }
+      .items a:hover {
+        color: orange;
+      }
+      .hov:hover .items {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <ul>
+        <li class="hov">
+          <span>网站栏目</span>
+          <div class="items">
+            <a href="#">shouji</a>
+            <a href="#">nvzhuang</a>
+            <a href="#">diannao</a>
+          </div>
+        </li>
+        <li><span>网站栏目</span></li>
+        <li><span>网站栏目</span></li>
+        <li><span>网站栏目</span></li>
+        <li><span>网站栏目</span></li>
+        <li><span>网站栏目</span></li>
+        <li><span>网站栏目</span></li>
+        <li><span>网站栏目</span></li>
+      </ul>
+    </div>
+  </body>
+</html>

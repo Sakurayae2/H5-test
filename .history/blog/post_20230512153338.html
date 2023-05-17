@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 顶部区域 */
+        .topContainer {
+            width: 100%;
+            height: 120px;
+            /* background-image: url(./imgs/10.png); */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .top {
+            min-width: 1500px;
+            width: 100%;
+            height: 50px;
+            background-color: #fff;
+            box-shadow: 0px 12px 10px -10px rgb(251, 231, 231);
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            position: fixed;
+            z-index: 999;
+            transition: all 0.6s;
+        }
+
+        .title {
+            display: flex;
+            margin-left: 20px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .text {
+            height: 50px;
+            line-height: 50px;
+            margin-left: 30px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .nav {
+            width: 680px;
+            height: 50px;
+            margin: auto;
+            background-color: rgb(251, 231, 231);
+            font-size: 18px;
+            font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            float: left;
+            width: 120px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .nav span {
+            display: block;
+            width: 120px;
+            height: 50px;
+        }
+
+        .nav span:hover {
+            background-color: pink;
+        }
+
+        .items {
+            width: 120px;
+            height: 130px;
+            border: 1px solid pink;
+            background-color: pink;
+            opacity: 0.8;
+            display: none;
+        }
+
+        .items a {
+            font: none;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            display: block;
+            margin-bottom: -10px;
+        }
+
+        .items a:link,
+        .items a:visited {
+            color: red;
+        }
+
+        .items a:hover {
+            color: orange;
+        }
+
+        .hov:hover .items {
+            display: block;
+        }
+
+        .search {
+            height: 45px;
+            line-height: 45px;
+            margin-right: 20px;
+        }
+
+        .search input {
+            display: inline-block;
+            width: 150px;
+            height: 30px;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .info {
+            width: 600px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .postTitle {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .qianyan {
+            width: 600px;
+            height: 100px;
+            background-color: rgb(173, 166, 166);
+            border-radius: 15px;
+            margin: 50px auto;
+            text-align: left;
+            padding: 10px;
+        }
+
+        .qianyan span {
+            font-size: 18px;
+            line-height: 50px;
+            padding-left: 18px;
+        }
+
+        .main {
+            width: 620px;
+            height: 800px;
+            background-color: #000;
+            border-radius: 15px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .tag {
+            color: white;
+            padding-top: 5px;
+        }
+
+        .code {
+            color: coral;
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .jump {
+            width: 200px;
+            height: 100%;
+            border-left: 1px solid #000;
+            position: fixed;
+            right: 0;
+            top: 50px;
+            text-align: left;
+            overflow-x: hidden;
+        }
+
+        .jump a {
+            padding: 25px 0px 8px 25px;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+        }
+
+        .jump a:hover {
+            color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topContainer">
+        <div class="top" id="top">
+            <!-- logo/标题 -->
+            <div class="title">
+                <img src="./imgs/10.jpg" alt="title" class="logo" />
+                <div class="text">CGin's blog</div>
+            </div>
+            <!-- 导航栏 -->
+            <div class="nav">
+                <ul>
+                    <li><span>首页</span></li>
+                    <li class="hov">
+                        <span>分类</span>
+                        <div class="items">
+                            <a href="#">音乐</a>
+                            <a href="#">游戏</a>
+                            <a href="#">番剧</a>
+                        </div>
+                    </li>
+                    <li><span>文章</span></li>
+                    <li><span>转载</span></li>
+                    <li><span>关于</span></li>
+                </ul>
+            </div>
+            <!-- 搜索 -->
+            <div class="search">
+                <input type="search" />
+            </div>
+
+        </div>
+
+    </div>
+    <div class="info">
+        <div class="postTitle">
+            <h2>标题：论xxx</h2>
+            <p style="margin:10px 0">Author:CGin</p>
+            <p>2023-5-14 12:34</p>
+        </div>
+    </div>
+    <div class="qianyan">
+        <span>红红火火恍恍惚惚哈哈哈哈哈哈哈哈哈哈哈hhhhhhh呵呵呵呵嘿嘿吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼h</span>
+    </div>
+    <div class="main">
+        <p class="tag">JavaScript</p>
+        <div class="code" id="code">
+            window.onscroll = function () {
+            var height = document.documentElement.scrollTop || document.body.scrollTop
+            height >= 300 ? (goTop.style.display = 'block', top.style.opacity = '1') : (goTop.style.display = 'none',
+            top.style.opacity = '0');
+            }
+        </div>
+    </div>
+    <div class="jump">
+        <a href="#code">1.code</a>
+        <a href="#p2">2.p2</a>
+        <a href="#p3">3.p3</a>
+    </div>
+    <div class="footer">
+
+    </div>
+</body>
+
+</html>

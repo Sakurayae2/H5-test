@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.slide {
+  display: none;
+}
+.fade {
+  animation: fade 1.2s;
+}
+.slide > img {
+  width: 100%;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  padding: 16px;
+  top: 50%;
+  transition: 0.4s ease;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.dotsList {
+  text-align: center;
+}
+.dot {
+  cursor: pointer;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: pink;
+  margin: 0 2px;
+  transition: all 0.4s;
+}
+.dot:hover {
+  background-color: cyan;
+}
+.active {
+  background-color: cyan;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
